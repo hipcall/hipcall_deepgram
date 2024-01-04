@@ -4,9 +4,11 @@ Unofficial Deepgram API Wrapper written in Elixir.
 
 ## Examples
 
-    iex> audio_url = "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
-    iex> option = [model: "base", language: "tr"]
-    iex> HipcallDeepgram.listen(audio_url, option)
+```elixir
+iex> audio_url = "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
+iex> option = [model: "base", language: "tr", punctuate: true, diarize: true, paragraphs: true, smart_format: true]
+iex> HipcallDeepgram.listen(audio_url, option)
+```
 
 ## Installation
 
@@ -27,7 +29,7 @@ be found at <https://hexdocs.pm/hipcall_deepgram>.
 
 ## Hipcall
 
-All Hipcall libraries:
+All [Hipcall](https://www.hipcall.com/en-gb/) libraries:
 
 - [HipcallDisposableEmail](https://github.com/hipcall/hipcall_disposable_email) - Simple library checking the email's domain is disposable or not.
 - [HipcallDeepgram](https://github.com/hipcall/hipcall_deepgram) - Unofficial Deepgram API Wrapper written in Elixir.
