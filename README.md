@@ -1,6 +1,6 @@
 # HipcallDeepgram
 
-**TODO: Add description**
+Unofficial Deepgram API Wrapper written in Elixir.
 
 ## Installation
 
@@ -19,3 +19,9 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/hipcall_deepgram>.
 
+## Hipcall
+
+All Hipcall libraries:
+
+- [HipcallDisposableEmail](https://github.com/hipcall/hipcall_disposable_email) - Simple library checking the email's domain is disposable or not.
+- [HipcallDeepgram](https://github.com/hipcall/hipcall_deepgram) - Unofficial Deepgram API Wrapper written in Elixir.

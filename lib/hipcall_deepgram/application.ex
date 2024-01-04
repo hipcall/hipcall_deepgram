@@ -8,6 +8,7 @@ defmodule HipcallDeepgram.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      {Finch, name: HipcallDeepgramFinch}
       # Starts a worker by calling: HipcallDeepgram.Worker.start_link(arg)
       # {HipcallDeepgram.Worker, arg}
     ]
