@@ -1,13 +1,16 @@
 defmodule HipcallDeepgram.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/hipcall/hipcall_deepgram"
+  @version "0.2.0"
+
   def project do
     [
       app: :hipcall_deepgram,
       name: "HipcallDeepgram",
       description: "Unofficial Deepgram API Wrapper written in Elixir.",
-      version: "0.1.0",
-      elixir: "~> 1.15",
+      version: @version,
+      elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package()
@@ -37,8 +40,19 @@ defmodule HipcallDeepgram.MixProject do
       licenses: ["MIT"],
       links: %{
         "Website" => "https://www.hipcall.com/en-gb/",
-        "GitHub" => "https://github.com/hipcall/hipcall_deepgram"
+        "GitHub" => @source_url
       }
+    ]
+  end
+
+  def docs do
+    [
+      main: "readme",
+      name: "HipcallDeepgram",
+      canonical: "https://hex.pm/packages/hipcall_disposable_email",
+      source_ref: "v#{@version}",
+      source_url: @source_url,
+      extras: ["README.md", "CHANGELOG.md", "LICENSE.md"]
     ]
   end
 end

@@ -46,7 +46,7 @@ defmodule HipcallDeepgram do
       },
       doc: """
       AI model used to process submitted audio. Default: nova-2-general.
-      For more information https://developers.deepgram.com/docs/model
+      Learn more https://developers.deepgram.com/docs/model
       """,
       default: "nova-2-general"
     ],
@@ -86,9 +86,41 @@ defmodule HipcallDeepgram do
       },
       doc: """
       The BCP-47 language tag that hints at the primary spoken language. Default: en.
-      For more information https://developers.deepgram.com/docs/language
+      Learn more https://developers.deepgram.com/docs/language
       """,
       default: "en"
+    ],
+    punctuate: [
+      type: :boolean,
+      doc: """
+      Add punctuation and capitalization to the transcript. Default: false.
+      Learn more https://developers.deepgram.com/docs/punctuation
+      """,
+      default: false
+    ],
+    diarize: [
+      type: :boolean,
+      doc: """
+      Recognize speaker changes. Each word in the transcript will be assigned a speaker number starting at 0. Default: false.
+      Learn more https://developers.deepgram.com/docs/diarization
+      """,
+      default: false
+    ],
+    paragraphs: [
+      type: :boolean,
+      doc: """
+      Split audio into paragraphs. Default: false.
+      Learn more https://developers.deepgram.com/docs/paragraphs
+      """,
+      default: false
+    ],
+    smart_format: [
+      type: :boolean,
+      doc: """
+      Apply formatting to transcript output. When set to true, additional formatting will be applied to transcripts to improve readability. Default: false.
+      Learn more https://developers.deepgram.com/docs/smart-format
+      """,
+      default: false
     ]
   ]
 
@@ -127,7 +159,7 @@ defmodule HipcallDeepgram do
           audio_url :: binary(),
           options :: keyword(),
           config :: map()
-        ) :: {:ok, Finch.Response.t()} | {:error, Exception.t()}
+        ) :: {:ok, map()} | {:error, map()} | {:error, any()}
   def listen(audio_url, options, config \\ %Config{}) do
     NimbleOptions.validate!(options, @listen_schema)
     Listen.listen(audio_url, options, config)

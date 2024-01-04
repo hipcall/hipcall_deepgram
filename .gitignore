@@ -25,3 +25,5 @@ hipcall_deepgram-*.tar
 # Temporary files, for example, from tests.
 /tmp/
 .env
+.NOTES.md
+example.ex

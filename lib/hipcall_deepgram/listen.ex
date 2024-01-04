@@ -9,7 +9,7 @@ defmodule HipcallDeepgram.Listen do
           audio_url :: binary(),
           options :: keyword(),
           config :: map()
-        ) :: {:ok, Finch.Response.t()} | {:error, Exception.t()}
+        ) :: {:ok, map()} | {:error, map()} | {:error, any()}
   def listen(audio_url, options, config \\ %Config{}) do
     Finch.build(
       :post,
@@ -19,6 +19,16 @@ defmodule HipcallDeepgram.Listen do
       []
     )
     |> Finch.request(HipcallDeepgramFinch, receive_timeout: 600_000)
+    |> case do
+      {:ok, %Finch.Response{status: 200, body: body}} ->
+        {:ok, body |> Jason.decode!()}
+
+      {:ok, %Finch.Response{status: status, body: body, headers: headers}} ->
+        {:error, %{status: status, body: body |> Jason.decode!(), headers: headers}}
+
+      {:error, reason} ->
+        {:error, reason}
+    end
   end
 
   defp endpoint_url(options) do
