@@ -159,7 +159,7 @@ defmodule HipcallDeepgram do
           audio_url :: binary(),
           options :: keyword(),
           config :: map()
-        ) :: {:ok, Finch.Response.t()} | {:error, Exception.t()}
+        ) :: {:ok, map()} | {:error, map()} | {:error, any()}
   def listen(audio_url, options, config \\ %Config{}) do
     NimbleOptions.validate!(options, @listen_schema)
     Listen.listen(audio_url, options, config)

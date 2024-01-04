@@ -26,3 +26,4 @@ hipcall_deepgram-*.tar
 /tmp/
 .env
 .NOTES.md
+example.ex
