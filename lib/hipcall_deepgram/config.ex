@@ -5,7 +5,6 @@ defmodule HipcallDeepgram.Config do
   """
 
   defstruct api_key: nil,
-            http_options: nil,
             api_url: nil
 
   @api_url "https://api.deepgram.com/v1/"
@@ -15,9 +14,6 @@ defmodule HipcallDeepgram.Config do
 
   @spec api_key() :: any()
   def api_key, do: get_config_value(:api_key, System.get_env("api_key"))
-
-  @spec http_options() :: any()
-  def http_options, do: get_config_value(:http_options, [])
 
   defp get_config_value(key, default) do
     value =
