@@ -101,7 +101,7 @@ defmodule HipcallDeepgram do
 
       iex> audio_url = "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
       iex> option = [model: "base", language: "tr"]
-      iex> HipcallDeepgram.Listen.listen(audio_url, option)
+      iex> HipcallDeepgram.listen(audio_url, option)
 
   ## Arguments
 
@@ -114,6 +114,9 @@ defmodule HipcallDeepgram do
   #{NimbleOptions.docs(@listen_schema)}
 
   ## Raises
+
+  - `NimbleOptions.ValidationError` - Validates the given options with
+  the given schema and raises if they're not valid.
 
   ## Returns
 

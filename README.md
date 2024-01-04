@@ -2,6 +2,12 @@
 
 Unofficial Deepgram API Wrapper written in Elixir.
 
+## Examples
+
+    iex> audio_url = "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
+    iex> option = [model: "base", language: "tr"]
+    iex> HipcallDeepgram.listen(audio_url, option)
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
