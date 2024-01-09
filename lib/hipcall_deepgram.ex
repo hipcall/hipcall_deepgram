@@ -121,6 +121,14 @@ defmodule HipcallDeepgram do
       Learn more https://developers.deepgram.com/docs/smart-format
       """,
       default: false
+    ],
+    multichannel: [
+      type: :boolean,
+      doc: """
+      Transcribe each audio channel independently. Default: false.
+      Learn more https://developers.deepgram.com/docs/multichannel
+      """,
+      default: false
     ]
   ]
 

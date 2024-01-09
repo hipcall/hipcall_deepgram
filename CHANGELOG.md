@@ -4,6 +4,7 @@
 
 - Fix docs problem with adding docs() method.
 - Add [Dependabot](https://github.com/dependabot)
+- Add multichannel feature
 
 ## v0.2.0 (2024-01-05)
 
