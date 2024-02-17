@@ -2,7 +2,7 @@ defmodule HipcallDeepgram.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/hipcall/hipcall_deepgram"
-  @version "0.3.0"
+  @version "0.4.0"
 
   def project do
     [

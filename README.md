@@ -10,7 +10,7 @@ by adding `hipcall_deepgram` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:hipcall_deepgram, "~> 0.1.0"}
+    {:hipcall_deepgram, "~> 0.4.0"}
   ]
 end
 ```
