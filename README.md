@@ -1,5 +1,8 @@
 # HipcallDeepgram
 
+[![Hex.pm Version](https://img.shields.io/hexpm/v/hipcall_deepgram)](https://hex.pm/packages/hipcall_deepgram)
+[![Hex.pm Download Total](https://img.shields.io/hexpm/dt/hipcall_deepgram)](https://hex.pm/packages/hipcall_deepgram)
+
 Unofficial Deepgram API Wrapper written in Elixir.
 
 ## Installation

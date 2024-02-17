@@ -2,7 +2,7 @@
 
 ## v0.4.0 (2024-02-17)
 
-- Update README.md
+- Update README.md.
 - Update ex_doc version.
 
 ## v0.3.0 (2024-01-09)
