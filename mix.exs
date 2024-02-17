@@ -29,7 +29,7 @@ defmodule HipcallDeepgram.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:finch, "~> 0.17.0"},
+      {:finch, "~> 0.18.0"},
       {:jason, "~> 1.4"},
       {:nimble_options, "~> 1.1"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false}
