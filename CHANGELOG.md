@@ -1,6 +1,11 @@
 # Changelog
 
-## v0.3.0
+## v0.4.0 (2024-02-17)
+
+- Update README.md
+- Update ex_doc version.
+
+## v0.3.0 (2024-01-09)
 
 - Fix docs problem with adding docs() method.
 - Add [Dependabot](https://github.com/dependabot)
