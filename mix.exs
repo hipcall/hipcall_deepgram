@@ -2,7 +2,7 @@ defmodule HipcallDeepgram.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/hipcall/hipcall_deepgram"
-  @version "0.4.0"
+  @version "0.5.0"
 
   def project do
     [
@@ -38,6 +38,7 @@ defmodule HipcallDeepgram.MixProject do
 
   def package do
     [
+      maintainers: ["Onur Ozgur OZKAN"],
       licenses: ["MIT"],
       links: %{
         "Website" => "https://www.hipcall.com/en-gb/",

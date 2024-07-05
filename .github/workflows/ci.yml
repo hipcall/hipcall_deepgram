@@ -48,3 +48,14 @@ jobs:
           key: ${{ matrix.otp }}-${{ matrix.elixir }}-build
       - run: mix compile --warnings-as-errors
       - run: mix test
+  publish:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Publish package to hex.pm
+        uses: hipcall/github_action_publish_hex@v1
+        env:
+          HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
